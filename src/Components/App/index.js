@@ -26,7 +26,11 @@ function App() {
     <div className="App">
       <h1 className="heading">Dictionary</h1>
       <Search getWord={setWord} />
-      {data ? <WordCard data={data} /> : <p>Enter the word</p>}
+      {data ? (
+        <WordCard data={data} />
+      ) : (
+        <p class="notification">Enter the word: i.e. cat, run, plum </p>
+      )}
       {data ? <WordMeanings meanings={data.meanings} /> : null}
     </div>
   );

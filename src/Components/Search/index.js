@@ -8,10 +8,8 @@ export default function Search({ getWord }) {
 
   return (
     <form className="search" onSubmit={handleSubmit}>
-      <div>
-        <input type="text" />
-        <button>🔍</button>
-      </div>
+      <input type="text" />
+      <button>🔍</button>
     </form>
   );
 }
