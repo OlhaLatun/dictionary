@@ -1,5 +1,7 @@
 import "./App.css";
 import Search from "../Search";
+import WordCard from "../WordCard";
+import WordMeanings from "../WordMeanings";
 import { useEffect, useState } from "react";
 
 import DictionaryAPI from "../../Helpers/service";
@@ -24,6 +26,8 @@ function App() {
     <div className="App">
       <h1 className="heading">Dictionary</h1>
       <Search getWord={setWord} />
+      {data ? <WordCard data={data} /> : <p>Enter the word</p>}
+      {data ? <WordMeanings meanings={data.meanings} /> : null}
     </div>
   );
 }
