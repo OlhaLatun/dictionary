@@ -23,16 +23,23 @@ function App() {
   }, [word]);
 
   return (
-    <div className="App">
-      <h1 className="heading">Dictionary</h1>
-      <Search getWord={setWord} />
-      {data ? (
-        <WordCard data={data} />
-      ) : (
-        <p class="notification">Enter the word: i.e. cat, run, plum </p>
-      )}
-      {data ? <WordMeanings meanings={data.meanings} /> : null}
-    </div>
+    <>
+      <div className="App">
+        <h1 className="heading">Dictionary</h1>
+        <Search getWord={setWord} />
+        {data ? (
+          <WordCard data={data} />
+        ) : (
+          <p class="notification">Enter the word: i.e. cat, run, plum </p>
+        )}
+        {data ? <WordMeanings meanings={data.meanings} /> : null}
+      </div>
+      <div className="footer">
+        {" "}
+        Source code on{" "}
+        <a href="https://github.com/OlhaLatun/dictionary">Github</a>
+      </div>
+    </>
   );
 }
 
