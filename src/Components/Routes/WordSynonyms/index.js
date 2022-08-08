@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function WordMeanings({ meanings }) {
+export default function WordSynonyms({ data }) {
   return (
     <div className="meanings">
-      {meanings.map((el, i) => (
+      {data.map((el, i) => (
         <MeaningCard meaning={el} key={i} />
       ))}
     </div>
@@ -11,11 +11,14 @@ export default function WordMeanings({ meanings }) {
 }
 
 function MeaningCard({ meaning }) {
-  console.log(meaning.partOfSpeech);
   return (
     <div className="meaning-card">
       <h3>{meaning.partOfSpeech}</h3>
-      <p>{meaning.definitions[0].definition}</p>
+      <ul>
+        {meaning.synonyms.length === 0
+          ? "No synonyms provided"
+          : meaning.synonyms.map((el, i) => <li key={i}>{el}</li>)}
+      </ul>
     </div>
   );
 }

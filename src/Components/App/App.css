@@ -82,3 +82,27 @@ body {
   text-transform: uppercase;
   color: #67489f;
 }
+
+.nav {
+  width: 80%;
+  justify-content: space-evenly;
+  margin: 30px auto;
+  display: flex;
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+.nav a {
+  padding: 15px 45px;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  border-radius: 10px;
+  background-color: #eceef0;
+}
+
+.active {
+  background: #fff;
+  border-radius: 10px;
+}
