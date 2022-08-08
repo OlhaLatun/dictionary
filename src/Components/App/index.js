@@ -56,7 +56,7 @@ function App() {
                   path="antonyms"
                   element={<WordAntonyms data={data.meanings} />}
                 />
-                <Route path="images" element={<WordImages />} />
+                <Route path="images" element={<WordImages word={word} />} />
               </Routes>
             </>
           ) : (

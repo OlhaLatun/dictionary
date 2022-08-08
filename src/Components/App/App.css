@@ -106,3 +106,21 @@ body {
   background: #fff;
   border-radius: 10px;
 }
+
+.footer {
+  text-align: center;
+}
+
+.gallery {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  border-radius: 10px;
+  margin: 10px;
+}

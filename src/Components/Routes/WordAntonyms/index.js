@@ -15,7 +15,7 @@ function Card({ meaning }) {
     <div className="meaning-card">
       <h3>{meaning.partOfSpeech}</h3>
       <ul>
-        {meaning.antonyms.length === 0
+        {meaning.antonyms
           ? "No antonyms provided"
           : meaning.antonyms.map((el, i) => <li key={i}>{el}</li>)}
       </ul>
